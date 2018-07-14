@@ -23,7 +23,7 @@ do_unpack() {
 }
 
 do_build() {
-  make PREFIX="${pkg_prefix}"
+  make -j "$(nproc)" PREFIX="${pkg_prefix}"
 }
 
 do_install() {
